@@ -1,204 +1,369 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💘💞💋💘</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 20px;
-            background: linear-gradient(145deg, #0c0a16, #05030c);
-            background-size: cover;
-            background-position: center;
-            transition: background 0.3s;
-        }
-        .container {
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            padding-top: 50px;
-        }
-        .profile {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            border: 1px solid black;   /* lebih tipis dan hitam */
-            overflow: hidden;
-            background: rgba(255,255,255,0.1);
-        }
-        .profile img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        h1 {
-            font-size: 1.8rem;
-            margin: 0 0 25px;
-            color: red;
-        }
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        /* TOMBOL SEMI-TRANSPARAN */
-        .btn {
-            display: flex;
-            align-items: center;
-            background: rgba(30, 25, 47, 0.6);
-            backdrop-filter: blur(4px);
-            border-radius: 50px;
-            padding: 12px 20px;
-            text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
-        }
-        .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            border-color: #ff6a9e;
-        }
-        .btn:active {
-            transform: scale(0.98);
-        }
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(-6px); }
-            40% { transform: translateX(6px); }
-            60% { transform: translateX(-4px); }
-            80% { transform: translateX(4px); }
-            100% { transform: translateX(0); }
-        }
-        .btn-shake {
-            animation: shake 0.4s ease-in-out;
-        }
-        .periodic-shake {
-            animation: shake 0.6s ease-in-out;
-        }
-        .btn-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .icon {
-            width: 45px;
-            height: 45px;
-            background: #2a1f3e;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-        }
-        .wa .icon { background: #075e54; color: white; }
-        .tg .icon { background: #2aabee; color: white; }
-        .btn-info h3 {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        .footer {
-            font-size: 0.7rem;
-            color: #5f5080;
-            margin-top: 20px;
-        }
-        @media (max-width: 500px) {
-            h1 { font-size: 1.5rem; }
-            .profile { width: 100px; height: 100px; border-width: 1px; }
-            .btn-info h3 { font-size: 1rem; }
-            .container { padding-top: 40px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="profile">
-            <img id="profileImg" alt="Profile">
-        </div>
-        <h1>Adult Dating Groups</h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="btn-group">
-            <div class="btn wa" id="waLink">
-                <div class="btn-left">
-                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
-                    <div class="btn-info"><h3>Whatsapp</h3></div>
-                </div>
-            </div>
-            <div class="btn tg" id="tgLink">
-                <div class="btn-left">
-                    <div class="icon"><i class="fab fa-telegram-plane"></i></div>
-                    <div class="btn-info"><h3>Telegram</h3></div>
-                </div>
-            </div>
+<title>Join Active Groups 🔥</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    background:black;
+    transition: background-image 0.8s ease-in-out;
+}
+
+/* CONTAINER */
+.container {
+    max-width:450px;
+    width:100%;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    min-height:90vh;
+}
+
+.content { flex:1; }
+
+/* PROFILE */
+.profile {
+    position:relative;
+    width:120px;
+    height:120px;
+    margin:50px auto 15px;
+    border-radius:50%;
+    overflow: visible;
+}
+
+.profile img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
+
+/* VERIFIED BADGE - SETENGAH DI LUAR (50%), MENYATU */
+.verified {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0072ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 999;
+}
+
+.verified i {
+    color: white;
+    font-size: 14px;
+}
+
+.verified.active {
+    animation: fadeInScale 0.4s forwards;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TITLE */
+h1 {
+    font-size:1.8rem;
+    margin-bottom:10px;
+    color:white;
+}
+
+/* MEMBER COUNT */
+.member-count {
+    background: rgba(255,255,255,0.08);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin: 5px auto 25px;
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+.member-count i {
+    color: #25D366;
+    font-size: 14px;
+}
+
+.member-count .dot {
+    color: #ffaa00;
+    font-size: 14px;
+}
+
+.member-count .active-icon {
+    color: #ffaa00;
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+/* BUTTON */
+.btn-group {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn {
+    display:flex;
+    align-items:center;
+    background:rgba(30,25,47,0.6);
+    border-radius:50px;
+    padding:12px 20px;
+    border:1px solid rgba(255,255,255,0.3);
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.btn-left {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.wa .icon { background:#25D366; color:white; }
+.tg .icon { background:#2AABEE; color:white; }
+
+.btn-info h3 { color:white; }
+
+/* ANIMASI BUTTON */
+.wa {
+  animation: pulseBtn 3s infinite, glowBtn 3s infinite;
+}
+
+.tg {
+  transition:0.2s;
+}
+
+@keyframes pulseBtn {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glowBtn {
+  0% { box-shadow: 0 0 5px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 0 18px rgba(37,211,102,1); }
+  100% { box-shadow: 0 0 5px rgba(37,211,102,0.5); }
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* FOOTER */
+.footer {
+    font-size:0.75rem;
+    color:#aaa;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="content">
+
+    <div class="profile">
+        <img id="profileImg" src="https://via.placeholder.com/120x120?text=Photo">
+        <div class="verified" id="verified">
+            <i class="fas fa-check"></i>
         </div>
-        <div class="footer"> 18+ only • Verified members</div>
     </div>
 
-    <script src="config.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const profileImg = document.getElementById('profileImg');
-            const waBtn = document.getElementById('waLink');
-            const tgBtn = document.getElementById('tgLink');
+    <h1>🔥Join Active Groups🔥</h1>
 
-            if (typeof config !== 'undefined') {
-                if (config.profileImage) profileImg.src = config.profileImage;
-                if (config.background) {
-                    document.body.style.background = config.background;
-                    document.body.style.backgroundSize = 'cover';
-                    document.body.style.backgroundPosition = 'center';
-                }
-            } else {
-                console.error('config.js tidak ditemukan');
-            }
+    <!-- MEMBER COUNT -->
+    <div class="member-count">
+        <i class="fas fa-users"></i> 24,568 Members
+        <span class="dot">⚡</span>
+        <span><i class="fas fa-circle active-icon"></i> 6,892 Active Now</span>
+    </div>
 
-            function startPeriodicShake() {
-                function shakeBoth() {
-                    waBtn.classList.add('periodic-shake');
-                    tgBtn.classList.add('periodic-shake');
-                    setTimeout(() => {
-                        waBtn.classList.remove('periodic-shake');
-                        tgBtn.classList.remove('periodic-shake');
-                    }, 600);
-                }
-                shakeBoth();
-                setInterval(shakeBoth, 5000);
-            }
+    <div class="btn-group">
+        <a class="btn wa" id="waLink" target="_blank" rel="noopener noreferrer">
+            <div class="btn-left">
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="btn-info"><h3>WhatsApp</h3></div>
+            </div>
+        </a>
 
-            window.addEventListener('load', startPeriodicShake);
+        <a class="btn tg" id="tgLink" target="_blank" rel="noopener noreferrer">
+            <div class="btn-left">
+                <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+                <div class="btn-info"><h3>Telegram</h3></div>
+            </div>
+        </a>
+    </div>
 
-            function handleClick(btn, link, platform) {
-                btn.classList.add('btn-shake');
-                setTimeout(() => btn.classList.remove('btn-shake'), 400);
-                if (!link || link === '#' || link === 'https://chat.whatsapp.com/YourInviteCodeHere' || link === 'https://t.me/YourGroupLinkHere') {
-                    setTimeout(() => alert(`Link ${platform} belum diatur oleh admin.`), 200);
-                    return;
-                }
-                setTimeout(() => window.open(link, '_blank'), 200);
-            }
+</div>
 
-            waBtn.addEventListener('click', (e) => {
+<div class="footer">🔞 18+ Only • Verified Members</div>
+
+</div>
+
+<script src="config.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    const profileImg = document.getElementById('profileImg');
+    const verified = document.getElementById('verified');
+    const waBtn = document.getElementById("waLink");
+    const tgBtn = document.getElementById("tgLink");
+
+    let waClicked = false;
+
+    // CENTANG MUNCUL
+    setTimeout(() => {
+        verified.classList.add("active");
+    }, 500);
+
+    if (typeof config !== 'undefined') {
+
+        if (config.profileImage) {
+            profileImg.src = config.profileImage;
+        }
+
+        // BACKGROUND SLIDE DENGAN TRANSISI LEMBUT + PRELOAD
+        const backgrounds = config.backgrounds || [];
+        let index = 0;
+        
+        function preloadAndChange() {
+            if (backgrounds.length === 0) return;
+            
+            // Preload gambar berikutnya biar transisi halus
+            const nextIndex = (index + 1) % backgrounds.length;
+            const nextImg = new Image();
+            nextImg.src = backgrounds[nextIndex];
+            
+            // Ganti background sekarang
+            document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+            
+            index = (index + 1) % backgrounds.length;
+        }
+        
+        // Mulai background slide
+        if (backgrounds.length > 0) {
+            preloadAndChange();
+            setInterval(preloadAndChange, 5000);
+        }
+    }
+
+    // SET LINK
+    if (waBtn && typeof config !== 'undefined') {
+        const waLink = config.whatsappLink || config.waLink;
+        if (waLink) {
+            waBtn.href = waLink;
+        } else {
+            waBtn.href = "#";
+            waBtn.addEventListener("click", function(e) {
                 e.preventDefault();
-                const waLink = (typeof config !== 'undefined' && config.whatsappLink) ? config.whatsappLink : '#';
-                handleClick(waBtn, waLink, 'WhatsApp');
+                alert("Link WhatsApp belum tersedia di config");
             });
-
-            tgBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const tgLink = (typeof config !== 'undefined' && config.telegramLink) ? config.telegramLink : '#';
-                handleClick(tgBtn, tgLink, 'Telegram');
-            });
+        }
+        
+        waBtn.addEventListener("click", function() {
+            waClicked = true;
         });
-    </script>
+    }
+    
+    if (tgBtn && typeof config !== 'undefined') {
+        const tgLink = config.telegramLink || config.tgLink;
+        if (tgLink) {
+            tgBtn.href = tgLink;
+        } else {
+            tgBtn.href = "#";
+            tgBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                alert("Link Telegram belum tersedia di config");
+            });
+        }
+    }
+
+    // ANIMASI
+    if (waBtn) {
+        setTimeout(() => {
+            waBtn.style.animation = "none";
+
+            setTimeout(() => {
+                waBtn.style.animation = "shake 0.4s";
+            }, 50);
+
+            setTimeout(() => {
+                waBtn.style.animation = "pulseBtn 3s infinite, glowBtn 3s infinite";
+            }, 500);
+        }, 1200);
+    }
+
+    if (tgBtn) {
+        setInterval(() => {
+            tgBtn.style.animation = "shake 0.4s";
+
+            setTimeout(() => {
+                tgBtn.style.animation = "none";
+            }, 400);
+        }, 7000);
+
+        setTimeout(() => {
+            if (!waClicked) {
+
+                tgBtn.style.animation = "pulseBtn 2s infinite";
+
+                setInterval(() => {
+                    tgBtn.style.animation = "shake 0.4s";
+
+                    setTimeout(() => {
+                        tgBtn.style.animation = "pulseBtn 2s infinite";
+                    }, 400);
+
+                }, 5000);
+            }
+        }, 8000);
+    }
+
+});
+</script>
+
 </body>
 </html>
