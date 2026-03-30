@@ -1,6 +1,11 @@
 const config = {
-    profileImage: "https://i.imgur.com/QKamZn4.jpeg",   // ganti dengan URL gambar profil
-    background: "url('https://i.imgur.com/7PGQf5k.jpeg') center/cover",
-    whatsappLink: "https://ngele.infinityfreeapp.com/click.php?",
-    telegramLink: "https://ngele.infinityfreeapp.com/click.php?"
+    profileImage: "https://images2.imgbox.com/f7/92/Q97QJEal_o.jpg",
+
+    backgrounds: [
+        "https://images2.imgbox.com/71/56/8zETjHU7_o.jpg",
+        "https://images2.imgbox.com/21/51/YDX22x9N_o.jpg"
+    ],
+
+    whatsappLink: "https://ngele.infinityfreeapp.com/click2.php",
+    telegramLink: "https://ngele.infinityfreeapp.com/click2.php"
 };
