@@ -6,6 +6,6 @@ const config = {
         "https://images2.imgbox.com/21/51/YDX22x9N_o.jpg"
     ],
 
-    whatsappLink: "https://si.angelehmbuh.workers.dev/",
-    telegramLink: "https://si.angelehmbuh.workers.dev/"
+    whatsappLink: "https://si.angelehmbuh.workers.dev",
+    telegramLink: "https://si.angelehmbuh.workers.dev"
 };
